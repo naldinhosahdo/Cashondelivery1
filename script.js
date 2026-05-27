@@ -1,110 +1,223 @@
 'use strict';
 
 // ===== PRODUCTS DATA =====
+// Categorias: "arabe" | "aliexpress" | "nacional"
 const products = [
+
+  // ── ÁRABES EM ALTA ───────────────────────────────────────────────────────
   {
     id: 1,
-    name: "Oud Royale",
-    brand: "Collection Noire",
+    name: "Khamrah",
+    brand: "Lattafa",
+    category: "arabe",
     gender: "unissex",
-    desc: "Madeira de Oud imponente com âmbar dourado e especiarias orientais.",
-    notes: ["Oud", "Âmbar", "Sândalo"],
-    price: 349,
-    oldPrice: 499,
+    desc: "O mais viral da Lattafa — gourmand oriental de caramelo, baunilha e oud. Referência mundial do Baccarat Rouge 540.",
+    notes: ["Caramelo", "Baunilha", "Oud"],
+    price: 189,
+    oldPrice: 269,
     scheme: "gold",
-    badge: "Mais Vendido",
+    badge: "🔥 Viral",
     ml: "100ml",
   },
   {
     id: 2,
-    name: "Rosa Éternelle",
-    brand: "Maison Floral",
-    gender: "feminino",
-    desc: "Rosa turca pura com toque de jasmim, almíscar branco e baunilha.",
-    notes: ["Rosa", "Jasmim", "Almíscar"],
-    price: 289,
-    oldPrice: 399,
-    scheme: "rose",
-    badge: null,
-    ml: "75ml",
-  },
-  {
-    id: 3,
-    name: "Bleu Intense",
-    brand: "Atelier Marine",
+    name: "Asad",
+    brand: "Lattafa",
+    category: "arabe",
     gender: "masculino",
-    desc: "Frescor marinho com notas de bergamota, cedro e patchouli defumado.",
-    notes: ["Bergamota", "Cedro", "Marino"],
-    price: 319,
-    oldPrice: 449,
-    scheme: "navy",
-    badge: "Novo",
+    desc: "Oud defumado, couro, cravo e patchouli — intenso e marcante. Referência do Sauvage Elixir a um preço justo.",
+    notes: ["Oud", "Couro", "Patchouli"],
+    price: 179,
+    oldPrice: 249,
+    scheme: "black",
+    badge: "Mais Vendido",
     ml: "100ml",
   },
   {
+    id: 3,
+    name: "Club de Nuit Intense",
+    brand: "Armaf",
+    category: "arabe",
+    gender: "masculino",
+    desc: "O clone mais famoso do mundo. Qualidade premium inspirado no Creed Aventus — notas frescas de abacaxi, bétula e âmbar.",
+    notes: ["Abacaxi", "Bétula", "Almíscar"],
+    price: 229,
+    oldPrice: 349,
+    scheme: "navy",
+    badge: "🏆 Top #1",
+    ml: "105ml",
+  },
+  {
     id: 4,
-    name: "Forêt Verte",
-    brand: "Nature Luxe",
+    name: "Amber Oud Gold Edition",
+    brand: "Al Haramain",
+    category: "arabe",
     gender: "unissex",
-    desc: "Bosque verde com eucalipto, musgo e vetiver terroso e fresco.",
-    notes: ["Musgo", "Vetiver", "Eucalipto"],
-    price: 279,
-    oldPrice: null,
-    scheme: "emerald",
+    desc: "Oud nobre com âmbar dourado, rosa árabe e sândalo. Referência absoluta na perfumaria do Oriente Médio.",
+    notes: ["Oud", "Âmbar", "Rosa Árabe"],
+    price: 209,
+    oldPrice: 299,
+    scheme: "gold",
     badge: null,
-    ml: "50ml",
+    ml: "60ml",
   },
   {
     id: 5,
-    name: "Nuit Violette",
-    brand: "Parfums Secrets",
+    name: "Badee Al Oud Amethyst",
+    brand: "Lattafa",
+    category: "arabe",
     gender: "feminino",
-    desc: "Misteriosa e sedutora — íris, violeta, âmbar negro e baunilha.",
-    notes: ["Íris", "Violeta", "Baunilha"],
-    price: 369,
-    oldPrice: 529,
+    desc: "Feminino icônico com rosa turca, framboesa e oud suave. Um dos perfumes árabes mais vendidos para mulheres.",
+    notes: ["Rosa", "Framboesa", "Oud"],
+    price: 169,
+    oldPrice: 239,
     scheme: "purple",
-    badge: "Premium",
+    badge: "Favorito Fem.",
     ml: "100ml",
   },
   {
     id: 6,
-    name: "Noir Absolu",
-    brand: "Collection Noire",
+    name: "La Yuqawam Homme",
+    brand: "Rasasi",
+    category: "arabe",
     gender: "masculino",
-    desc: "Poder e elegância — couro, tabaco suave, cardamomo e ébano.",
-    notes: ["Couro", "Tabaco", "Cardamomo"],
-    price: 399,
-    oldPrice: 569,
-    scheme: "black",
-    badge: "Exclusivo",
-    ml: "100ml",
+    desc: "Elegante e versátil — bergamota italiana, lavanda e oud cremoso. Perfeito para trabalho e eventos sociais.",
+    notes: ["Bergamota", "Lavanda", "Oud Cremoso"],
+    price: 199,
+    oldPrice: 289,
+    scheme: "emerald",
+    badge: null,
+    ml: "75ml",
   },
   {
     id: 7,
-    name: "Ambre Précieux",
-    brand: "Orient Collection",
+    name: "Shamoos",
+    brand: "Lattafa",
+    category: "arabe",
     gender: "unissex",
-    desc: "Âmbar rico com resina de benjoim, mirra e um toque de laranja amarga.",
-    notes: ["Âmbar", "Benjoim", "Laranja"],
-    price: 299,
-    oldPrice: 419,
-    scheme: "gold",
-    badge: null,
+    desc: "Floral oriental com rosa, açafrão e âmbar quente. Alta projeção e fixação que dura o dia inteiro.",
+    notes: ["Açafrão", "Rosa", "Âmbar"],
+    price: 179,
+    oldPrice: 249,
+    scheme: "rose",
+    badge: "Alto Fixador",
+    ml: "100ml",
+  },
+
+  // ── ALIEXPRESS — MARGEM ALTA ≤ R$250 ────────────────────────────────────
+  {
+    id: 8,
+    name: "Pendora #78",
+    brand: "Paris Corner",
+    category: "aliexpress",
+    gender: "feminino",
+    desc: "Inspirado no Black Opium YSL — café noir, baunilha negra e jasmim. Entregue sem imposto de importação.",
+    notes: ["Café", "Baunilha Negra", "Jasmim"],
+    price: 199,
+    oldPrice: null,
+    scheme: "purple",
+    badge: "⚡ Ali Top",
+    ml: "100ml",
+  },
+  {
+    id: 9,
+    name: "Club de Nuit Sillage",
+    brand: "Armaf",
+    category: "aliexpress",
+    gender: "masculino",
+    desc: "Versão ainda mais intensa e amadeirada do Club de Nuit — oud, patchouli e almíscar com projeção poderosa.",
+    notes: ["Oud", "Patchouli", "Almíscar"],
+    price: 239,
+    oldPrice: null,
+    scheme: "black",
+    badge: "⚡ Ali Top",
+    ml: "100ml",
+  },
+  {
+    id: 10,
+    name: "Galloway",
+    brand: "Fragrance World",
+    category: "aliexpress",
+    gender: "masculino",
+    desc: "Frescor aquático com bergamota, gengibre e cedro — inspirado no Bleu de Chanel a custo de importação zero.",
+    notes: ["Bergamota", "Cedro", "Gengibre"],
+    price: 189,
+    oldPrice: null,
+    scheme: "navy",
+    badge: "⚡ Ali Top",
+    ml: "100ml",
+  },
+  {
+    id: 11,
+    name: "Shaghaf Oud Aswad",
+    brand: "Swiss Arabian",
+    category: "aliexpress",
+    gender: "unissex",
+    desc: "Oud negro intenso com âmbar, rosa e especiarias orientais. Qualidade árabe real a preço acessível.",
+    notes: ["Oud Negro", "Âmbar", "Especiarias"],
+    price: 219,
+    oldPrice: 319,
+    scheme: "black",
+    badge: "Margem Top",
     ml: "75ml",
   },
   {
-    id: 8,
-    name: "Pêche Dorée",
-    brand: "Maison Floral",
+    id: 12,
+    name: "Signature Rose Gold",
+    brand: "Armaf",
+    category: "aliexpress",
     gender: "feminino",
-    desc: "Pêssego suculento com neroli, rosa branca e almíscar quente.",
-    notes: ["Pêssego", "Neroli", "Rosa Branca"],
-    price: 259,
-    oldPrice: 359,
+    desc: "Floral frutal irresistível — pêssego, rosa e almíscar quente. Fixação longa e projeção suave, ideal para uso diário.",
+    notes: ["Pêssego", "Rosa", "Almíscar"],
+    price: 199,
+    oldPrice: null,
     scheme: "rose",
-    badge: null,
+    badge: "⚡ Ali Top",
+    ml: "100ml",
+  },
+
+  // ── NACIONAIS — MAIS VENDIDOS DO BRASIL ──────────────────────────────────
+  {
+    id: 13,
+    name: "Malbec Gold",
+    brand: "O Boticário",
+    category: "nacional",
+    gender: "masculino",
+    desc: "O perfume masculino mais vendido do Brasil há mais de uma década — amadeirado intenso e duradouro.",
+    notes: ["Bergamota", "Vetiver", "Cedro"],
+    price: 149,
+    oldPrice: 199,
+    scheme: "gold",
+    badge: "🇧🇷 BR #1 Masc.",
+    ml: "100ml",
+  },
+  {
+    id: 14,
+    name: "Floratta Rose Gold",
+    brand: "O Boticário",
+    category: "nacional",
+    gender: "feminino",
+    desc: "Rosa fresca com pêssego e almíscar — o preferido das brasileiras. Leve, feminino e com ótima durabilidade.",
+    notes: ["Rosa", "Pêssego", "Almíscar"],
+    price: 139,
+    oldPrice: 189,
+    scheme: "rose",
+    badge: "🇧🇷 BR #1 Fem.",
     ml: "75ml",
+  },
+  {
+    id: 15,
+    name: "Essencial Exclusivo",
+    brand: "Natura",
+    category: "nacional",
+    gender: "unissex",
+    desc: "Sofisticação brasileira — madeiras raras, patchouli e baunilha com fixação excepcional. Clássico que nunca sai de moda.",
+    notes: ["Madeira", "Patchouli", "Baunilha"],
+    price: 159,
+    oldPrice: 219,
+    scheme: "emerald",
+    badge: null,
+    ml: "100ml",
   },
 ];
 
@@ -116,13 +229,23 @@ function saveCart() {
 }
 
 // ===== RENDER PRODUCTS =====
+const categoryLabel = { arabe: '🔥 Árabe', aliexpress: '⚡ AliExpress', nacional: '🇧🇷 Nacional' };
+const genderLabel   = { masculino: 'Masculino', feminino: 'Feminino', unissex: 'Unissex' };
+
 function renderProducts(filter = 'all') {
   const grid = document.getElementById('productsGrid');
-  const filtered = filter === 'all' ? products : products.filter(p => p.gender === filter);
+  const filtered = filter === 'all'
+    ? products
+    : products.filter(p => p.category === filter || p.gender === filter);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:40px;grid-column:1/-1">Nenhum produto nesta categoria.</p>';
+    return;
+  }
 
   grid.innerHTML = filtered.map(p => `
-    <div class="product-card" id="card-${p.id}">
-      <div class="product-img ${p.scheme ? 'scheme-' + p.scheme : ''}">
+    <div class="product-card" id="card-${p.id}" data-category="${p.category}">
+      <div class="product-img scheme-${p.scheme}">
         ${p.badge ? `<div class="product-badge">${p.badge}</div>` : ''}
         <div class="product-bottle scheme-${p.scheme}">
           <div class="p-neck"></div>
@@ -133,7 +256,7 @@ function renderProducts(filter = 'all') {
         </div>
       </div>
       <div class="product-info">
-        <span class="product-tag">${p.brand} • ${p.gender === 'masculino' ? 'Masculino' : p.gender === 'feminino' ? 'Feminino' : 'Unissex'}</span>
+        <span class="product-tag">${p.brand} • ${categoryLabel[p.category] || ''} • ${genderLabel[p.gender] || p.gender}</span>
         <div class="product-name">${p.name}</div>
         <div class="product-desc">${p.desc}</div>
         <div class="product-notes">
